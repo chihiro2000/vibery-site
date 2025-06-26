@@ -1,26 +1,61 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #020617;
+    color: #f8fafc;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .prose {
+    @apply text-gray-300;
+    max-width: none;
+  }
+  
+  .prose h2 {
+    @apply text-white;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .prose h3 {
+    @apply text-gray-100;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .prose p {
+    margin-bottom: 1rem;
+  }
+  
+  .prose ul, .prose ol {
+    margin-bottom: 1rem;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
 }
