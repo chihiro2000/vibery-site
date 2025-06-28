@@ -2,7 +2,9 @@
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
+import { LINKS } from "@/config/links";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,22 +32,36 @@ export function Header() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group z-50">
-            <div className="w-8 h-8 bg-mono-50 rounded-full transition-transform group-hover:scale-110 duration-300"></div>
+            <div className="relative w-8 h-8 transition-transform group-hover:scale-110 duration-300">
+              <Image
+                src="/images/applogo.jpg"
+                alt={`${LINKS.site.name} ロゴ`}
+                fill
+                className="object-contain rounded-lg"
+                priority
+              />
+            </div>
             <span className="text-xl font-display font-bold text-mono-50 tracking-tight">
-              Vibery
+              {LINKS.site.name}
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
-              href="/privacy"
+              href={LINKS.internal.home}
+              className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium text-sm"
+            >
+              Home
+            </Link>
+            <Link
+              href={LINKS.internal.privacy}
               className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium text-sm"
             >
               Privacy
             </Link>
             <Link
-              href="/terms"
+              href={LINKS.internal.terms}
               className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium text-sm"
             >
               Terms
@@ -83,14 +99,21 @@ export function Header() {
           <nav className="md:hidden border-t border-mono-800/50 py-4 bg-mono-950/95 backdrop-blur-xl">
             <div className="flex flex-col space-y-4">
               <Link
-                href="/privacy"
+                href={LINKS.internal.home}
+                className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                ホーム
+              </Link>
+              <Link
+                href={LINKS.internal.privacy}
                 className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 プライバシーポリシー
               </Link>
               <Link
-                href="/terms"
+                href={LINKS.internal.terms}
                 className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >

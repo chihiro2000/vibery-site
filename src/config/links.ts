@@ -15,6 +15,7 @@ export const LINKS = {
 
   // 内部ページ
   internal: {
+    home: "/",
     privacy: "/privacy",
     terms: "/terms",
   },

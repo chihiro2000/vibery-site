@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "感性で繋がる、新しい友達づくり。同性限定で安心して趣味や価値観を共有できるコミュニケーションアプリ。",
     images: [
       {
-        url: "/images/og-image.jpg", // この画像を作成することをお勧めします
+        url: "/images/applogo.jpg", // アプリロゴを使用
         width: 1200,
         height: 630,
         alt: "Vibery - 同性の友達づくりアプリ",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Vibery - 同性の友達づくりアプリ",
     description:
       "感性で繋がる、新しい友達づくり。同性限定で安心して趣味や価値観を共有できるコミュニケーションアプリ。",
-    images: ["/images/og-image.jpg"], // OG画像と同じものを使用
+    images: ["/images/applogo.jpg"], // アプリロゴを使用
     creator: "@vibery__official", // Threadsのハンドル名
   },
   manifest: "/manifest.json", // PWA対応の場合
@@ -77,6 +77,21 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "black-translucent",
     title: LINKS.site.name,
+  },
+  icons: {
+    icon: [
+      { url: "/images/applogo.jpg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/images/applogo.jpg", sizes: "16x16", type: "image/jpeg" },
+    ],
+    apple: [
+      { url: "/images/applogo.jpg", sizes: "180x180", type: "image/jpeg" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/images/applogo.jpg",
+      },
+    ],
   },
   formatDetection: {
     telephone: false,
