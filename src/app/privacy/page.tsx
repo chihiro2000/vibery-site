@@ -19,7 +19,7 @@ export default function PrivacyPage() {
             </h1>
             <div className="w-16 h-px bg-mono-600 mx-auto mb-8"></div>
             <p className="text-mono-500 font-mono uppercase tracking-wider text-sm">
-              最終更新日: 2025年6月25日
+              最終更新日: 2025年3月8日
             </p>
           </header>
 
@@ -86,7 +86,27 @@ export default function PrivacyPage() {
 
               <div className="mb-12">
                 <h3 className="text-2xl font-display font-semibold mb-6 text-mono-100">
-                  位置情報について
+                  本アプリが通報対応時に取得する利用者情報
+                </h3>
+                <div className="glass p-8 rounded-xl mb-6">
+                  <p className="mb-4 text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      取得項目:{" "}
+                    </strong>
+                    利用者間で交わされるメッセージの内容、通報情報
+                  </p>
+                  <p className="text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      利用目的:{" "}
+                    </strong>
+                    通報時の対応、アプリ内の安全性の維持
+                  </p>
+                </div>
+              </div>
+
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-mono-100">
+                  本アプリが位置情報に関連して取得する利用者情報
                 </h3>
                 <div className="glass p-8 rounded-xl mb-6">
                   <p className="mb-4 text-mono-300 text-lg">
@@ -109,11 +129,111 @@ export default function PrivacyPage() {
                   </p>
                 </div>
               </div>
+
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-mono-100">
+                  本アプリが自動的に取得する利用者情報
+                </h3>
+                <div className="glass p-8 rounded-xl mb-6">
+                  <p className="mb-4 text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      取得項目:{" "}
+                    </strong>
+                    アプリ内のユーザー識別子、デバイスID、端末モデル名、言語・地域設定、IPアドレス、OS名、OSバージョン
+                  </p>
+                  <p className="mb-4 text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      利用目的:{" "}
+                    </strong>
+                    アカウント管理、不正利用防止、データ分析、アプリ障害の原因分析
+                  </p>
+                  <p className="text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      第三者提供:{" "}
+                    </strong>
+                    有り（以下の情報収集モジュール提供事業者に提供します）
+                  </p>
+                </div>
+              </div>
             </section>
 
             <section className="mb-16">
               <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
-                2. データの保持期間
+                2.
+                情報収集モジュール提供事業者が情報収集モジュールで自動的に取得する利用者情報
+              </h2>
+              <div className="w-12 h-px bg-mono-700 mb-8"></div>
+
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-mono-100">
+                  Firebase (Google LLC)
+                </h3>
+                <div className="glass p-8 rounded-xl mb-6">
+                  <p className="mb-4 text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      取得項目:{" "}
+                    </strong>
+                    インスタンスID、Firebaseが発行した識別子、アプリの起動・操作情報等の利用履歴、アプリクラッシュ時の技術情報
+                  </p>
+                  <p className="mb-4 text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      利用目的:{" "}
+                    </strong>
+                    ユーザー認証、データ保存、プッシュ通知、データ分析、アプリクラッシュの原因分析
+                  </p>
+                  <p className="text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      詳細:{" "}
+                    </strong>
+                    <a
+                      href="https://firebase.google.com/support/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-mono-300 hover:text-mono-100 transition-colors underline underline-offset-4"
+                    >
+                      https://firebase.google.com/support/privacy
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="mb-12">
+                <h3 className="text-2xl font-display font-semibold mb-6 text-mono-100">
+                  Google AdMob (Google LLC)
+                </h3>
+                <div className="glass p-8 rounded-xl mb-6">
+                  <p className="mb-4 text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      取得項目:{" "}
+                    </strong>
+                    広告識別子、端末情報、広告表示・クリック情報
+                  </p>
+                  <p className="mb-4 text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      利用目的:{" "}
+                    </strong>
+                    広告配信、広告効果測定
+                  </p>
+                  <p className="text-mono-300 text-lg">
+                    <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                      詳細:{" "}
+                    </strong>
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-mono-300 hover:text-mono-100 transition-colors underline underline-offset-4"
+                    >
+                      https://policies.google.com/privacy
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+                3. データの保持期間
               </h2>
               <div className="w-12 h-px bg-mono-700 mb-8"></div>
               <ul className="list-disc list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
@@ -130,7 +250,17 @@ export default function PrivacyPage() {
 
             <section className="mb-16">
               <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
-                3. 運営者によるデータアクセスについて
+                4. 利用者情報の取得・利用に関する同意
+              </h2>
+              <div className="w-12 h-px bg-mono-700 mb-8"></div>
+              <p className="text-mono-300 text-lg leading-relaxed">
+                本アプリおよび本サービスは本アプリケーション・プライバシーポリシーをご確認いただき、内容を理解したうえでご利用ください。ご利用者は本アプリをインストールする際に本アプリケーション・プライバシーポリシーをご確認ください。
+              </p>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+                5. 運営者によるデータアクセスについて
               </h2>
               <div className="w-12 h-px bg-mono-700 mb-8"></div>
               <p className="mb-6 text-mono-300 text-lg">
@@ -151,7 +281,7 @@ export default function PrivacyPage() {
 
             <section className="mb-16">
               <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
-                4. 未成年者の利用について
+                6. 未成年者の利用について
               </h2>
               <div className="w-12 h-px bg-mono-700 mb-8"></div>
               <p className="text-mono-300 text-lg leading-relaxed">
@@ -161,10 +291,43 @@ export default function PrivacyPage() {
 
             <section className="mb-16">
               <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
-                5. お問い合わせ窓口
+                7. 利用者情報の取得停止等
               </h2>
               <div className="w-12 h-px bg-mono-700 mb-8"></div>
               <div className="glass p-8 rounded-xl">
+                <p className="text-mono-300 text-lg leading-relaxed mb-4">
+                  <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                    位置情報の取得停止:{" "}
+                  </strong>
+                  デバイスの設定から位置情報の許可を変更できます。
+                </p>
+                <p className="text-mono-300 text-lg leading-relaxed mb-4">
+                  <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                    プッシュ通知の停止:{" "}
+                  </strong>
+                  デバイスの設定またはアプリ内の設定から変更できます。
+                </p>
+                <p className="text-mono-300 text-lg leading-relaxed mb-4">
+                  <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                    アカウント削除:{" "}
+                  </strong>
+                  アプリ内の設定から退会手続きを行うことができます。
+                </p>
+                <p className="text-mono-300 text-lg leading-relaxed">
+                  その他の利用者情報の取得停止をご希望の場合は、以下の問い合わせ窓口にご連絡ください。
+                </p>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+                8. 問い合わせ窓口
+              </h2>
+              <div className="w-12 h-px bg-mono-700 mb-8"></div>
+              <div className="glass p-8 rounded-xl">
+                <p className="mb-6 text-mono-300 text-lg">
+                  利用者情報の取り扱いに関するお問い合わせ、ご相談は下記メールにてお受けします。
+                </p>
                 <p className="mb-4 text-lg">
                   <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
                     運営者名:{" "}
@@ -178,13 +341,23 @@ export default function PrivacyPage() {
                     Email:{" "}
                   </strong>
                   <a
-                    href={LINKS.contact.email}
+                    href="mailto:vibery.official@gmail.com"
                     className="text-mono-300 hover:text-mono-100 transition-colors underline underline-offset-4"
                   >
-                    vibery.official.app@gmail.com
+                    vibery.official@gmail.com
                   </a>
                 </p>
               </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+                9. 本アプリケーション・プライバシーポリシーの変更
+              </h2>
+              <div className="w-12 h-px bg-mono-700 mb-8"></div>
+              <p className="text-mono-300 text-lg leading-relaxed">
+                本アプリのバージョンアップ等に伴い、本アプリケーション・プライバシーポリシーを変更することがあります。重要な変更がある場合は、アプリ内でお知らせします。
+              </p>
             </section>
           </div>
         </div>
