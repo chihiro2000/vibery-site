@@ -66,10 +66,10 @@ export function Hero() {
             今すぐダウンロード
           </Button>
         </div>
-
-        {/* スクロールインジケーター */}
-        <ScrollIndicator />
       </Container>
+
+      {/* スクロールインジケーター - Container外に配置 */}
+      <ScrollIndicator />
     </section>
   );
 }
