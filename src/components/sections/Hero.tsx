@@ -1,9 +1,10 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { ScrollIndicator } from "@/components/ui/ScrollIndicator";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden mt-0 pb-20">
+    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden mt-0 pb-16">
       {/* Background Images - Responsive */}
       <div className="absolute inset-0">
         {/* Mobile Background - 拡大表示 & 少し上寄せ */}
@@ -65,6 +66,9 @@ export function Hero() {
             今すぐダウンロード
           </Button>
         </div>
+
+        {/* スクロールインジケーター */}
+        <ScrollIndicator />
       </Container>
     </section>
   );
