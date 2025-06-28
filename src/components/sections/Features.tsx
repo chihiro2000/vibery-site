@@ -2,25 +2,25 @@ import { Container } from "@/components/ui/Container";
 
 const features = [
   {
-    title: "同性限定",
+    title: "同性限定だから、安心できる。",
     description:
-      "安心・安全な環境で、純粋な友情を育むことができます。恋愛目的の利用は一切禁止しています。",
+      "恋愛目的を一切排除し、\n同性だけに限定された空間だからこそ、\n誰にも気をつかわず、本音でつながれる。",
     icon: "01",
-    highlight: "Safe Environment",
+    highlight: "SAFETY & RELATABILITY",
   },
   {
-    title: "趣味タグマッチング",
+    title: "投稿は、フレンドにだけ。",
     description:
-      "共通の趣味や興味でつながれる独自のタグシステム。価値観の合う友達を見つけやすくなります。",
+      "あなたの投稿は、共鳴した相手にしか届きません。\nだからこそ、日々のこと、価値観、弱さも、\n自由に言葉にしていける空間です。",
     icon: "02",
-    highlight: "Smart Matching",
+    highlight: "PRIVATE SHARING",
   },
   {
-    title: "恋愛ナシの純粋な友情",
+    title: "趣味タグで、自然につながる。",
     description:
-      "恋愛や出会い系とは一線を画した、友達づくりに特化したコミュニケーション環境を提供します。",
+      "共通の「好き」から始まるつながり。\nタグで表現されたあなたの感性に\n共鳴する相手と、自然に出会えます。",
     icon: "03",
-    highlight: "Pure Friendship",
+    highlight: "TAG-BASED MATCHING",
   },
 ];
 
@@ -59,10 +59,10 @@ export function Features() {
                 <div className="w-12 h-px bg-mono-700 group-hover:bg-mono-500 transition-colors mb-6"></div>
               </div>
 
-              <h3 className="text-2xl font-display font-bold mb-6 text-mono-100 group-hover:text-mono-50 transition-colors">
+              <h3 className="text-2xl font-display font-bold mb-6 text-mono-100 group-hover:text-mono-50 transition-colors whitespace-pre-line">
                 {feature.title}
               </h3>
-              <p className="text-mono-400 leading-relaxed group-hover:text-mono-300 transition-colors">
+              <p className="text-mono-400 leading-relaxed group-hover:text-mono-300 transition-colors whitespace-pre-line">
                 {feature.description}
               </p>
             </div>
