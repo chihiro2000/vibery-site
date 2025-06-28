@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vibery-site.vercel.app
+
+# Sitemaps
+Sitemap: https://vibery-site.vercel.app/sitemap.xml
