@@ -62,14 +62,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vibery - 同性の友達づくりアプリ",
-    description:
-      "感性で繋がる、新しい友達づくり。同性限定で安心して趣味や価値観を共有できるコミュニケーションアプリ。",
-    images: ["/images/applogo.jpg"], // アプリロゴを使用
-    creator: "@vibery__official", // Threadsのハンドル名
-  },
+
   manifest: "/manifest.json", // PWA対応の場合
   category: "Social Media",
   applicationName: LINKS.site.name,
