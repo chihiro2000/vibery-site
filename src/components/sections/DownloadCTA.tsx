@@ -1,14 +1,11 @@
 "use client";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { LINKS } from "@/config/links";
 
 export function DownloadCTA() {
   const handleDownload = () => {
-    window.open(
-      "https://apps.apple.com/jp/app/vibery-%E5%8F%8B%E9%81%94%E4%BD%9C%E3%82%8A-%E8%B6%A3%E5%91%B3-%E5%90%8C%E6%80%A7%E9%99%90%E5%AE%9Asns/id6739957098",
-      "_blank",
-      "noopener,noreferrer"
-    );
+    window.open(LINKS.appStore, "_blank", "noopener,noreferrer");
   };
 
   return (
