@@ -1,8 +1,17 @@
+"use client";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ScrollIndicator } from "@/components/ui/ScrollIndicator";
 
 export function Hero() {
+  const handleDownload = () => {
+    window.open(
+      "https://apps.apple.com/jp/app/vibery-%E5%8F%8B%E9%81%94%E4%BD%9C%E3%82%8A-%E8%B6%A3%E5%91%B3-%E5%90%8C%E6%80%A7%E9%99%90%E5%AE%9Asns/id6739957098",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   return (
     <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden mt-0 pb-16">
       {/* Background Images - Responsive */}
@@ -62,6 +71,7 @@ export function Hero() {
             variant="primary"
             size="xl"
             className="min-w-[280px] font-semibold shadow-2xl"
+            onClick={handleDownload}
           >
             今すぐダウンロード
           </Button>
