@@ -1,79 +1,80 @@
-import { Container } from "@/components/ui/Container"
-import { Button } from "@/components/ui/Button"
+import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800">
-      {/* 背景エフェクト */}
+    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden mt-16 pb-20">
+      {/* Background Images - Responsive */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/10 rounded-full blur-3xl"></div>
+        {/* Mobile Background - 拡大表示 & 少し上寄せ */}
+        <div
+          className="absolute inset-0 md:hidden
+            bg-[url('/images/hero/heroMobile.jpg')]
+            bg-[length:130%_auto]
+            bg-[position:50%_25%]
+            bg-no-repeat"
+        ></div>
+        {/* Desktop Background */}
+        <div className="absolute inset-0 hidden md:block bg-[url('/images/hero/heroPc.jpg')] bg-cover bg-center bg-no-repeat"></div>
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-mono-950/60"></div>
       </div>
 
-      {/* グリッド背景 */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      
-      <Container className="relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-              感性で繋がる、<br />
-              <span className="gradient-text animate-gradient bg-size-200">新しい友達づくり</span>
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-30"></div>
+
+      {/* Subtle glow effects */}
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-mono-50/3 rounded-full blur-3xl animate-pulse"></div>
+      <div
+        className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-mono-50/2 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: "2s" }}
+      ></div>
+
+      <Container className="relative z-10 text-center">
+        <div className="max-w-6xl mx-auto">
+          {/* Vibery Brand Title - 正しいBebas Neue */}
+          <div className="mb-12">
+            <h2 className="bebas-title text-mono-50 drop-shadow-2xl">VIBERY</h2>
+          </div>
+
+          {/* Main heading */}
+          <div className="mb-16">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl japanese-title mb-8 leading-[1.1] tracking-tight drop-shadow-lg">
+              <span className="block text-mono-50">同性限定の</span>
+              <span className="block text-gradient mt-2">友達探しSNS</span>
             </h1>
-            
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
-              恋愛ではなく、純粋な友情を。<br />
-              同性限定で安心して趣味や価値観を共有できる<br />
-              <span className="text-accent-400 font-semibold">次世代コミュニケーションアプリ</span>
+
+            <div className="w-24 h-px bg-mono-400 mx-auto mb-12"></div>
+
+            <p className="text-lg md:text-xl lg:text-2xl text-mono-200 max-w-4xl mx-auto leading-relaxed font-light drop-shadow-md">
+              このアプリでは、趣味や価値観で自然につながれる。
+              <br className="hidden md:block" />
+              <span className="text-mono-100 font-medium">
+                恋愛目的の人はいないから、ちゃんと探せる！
+              </span>
             </p>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button variant="gradient" size="xl" className="min-w-[280px]">
-              <span className="mr-2">📱</span>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Button
+              variant="primary"
+              size="xl"
+              className="min-w-[280px] font-semibold shadow-2xl"
+            >
+              <span className="mr-3">📱</span>
               App Storeでダウンロード
             </Button>
-            <Button variant="outline" size="xl" className="min-w-[200px]">
+            <Button
+              variant="outline"
+              size="xl"
+              className="min-w-[200px] backdrop-blur-sm"
+            >
               詳しく見る
             </Button>
-          </div>
-
-          {/* アプリスクリーンショット */}
-          <div className="relative max-w-sm mx-auto">
-            <div className="relative z-10 glass rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-500 animate-float">
-              <div className="w-full h-96 bg-gradient-to-br from-dark-700 to-dark-800 rounded-2xl flex items-center justify-center border border-white/10">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl">📱</span>
-                  </div>
-                  <span className="text-gray-400 text-lg">アプリスクリーンショット</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* 装飾的な要素 */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent-500/30 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
-          </div>
-
-          {/* 統計情報 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent-400 mb-2">10万+</div>
-              <div className="text-gray-400">ダウンロード</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">4.8★</div>
-              <div className="text-gray-400">App Store評価</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">98%</div>
-              <div className="text-gray-400">満足度</div>
-            </div>
           </div>
         </div>
       </Container>
     </section>
-  )
+  );
 }

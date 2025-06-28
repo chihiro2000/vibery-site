@@ -29,35 +29,40 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-32 relative">
+      <div className="section-divider mb-32"></div>
+      
       <Container>
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            よくある質問
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 text-mono-50">
+            FAQ
           </h2>
-          <p className="text-xl text-gray-600">
-            Viberyについてのご質問にお答えします
+          <p className="text-xl text-mono-400 font-light">
+            よくある質問にお答えします
           </p>
         </div>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-6">
               <button
-                className="w-full bg-white rounded-lg p-6 text-left shadow-md hover:shadow-lg transition-shadow"
+                className="w-full glass rounded-xl p-8 text-left hover:bg-mono-50/5 transition-all duration-300 group"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <div className="flex justify-between items-center">
-                  <h3 className="font-bold text-lg pr-4">{faq.question}</h3>
-                  <span className="text-2xl text-accent-500">
+                <div className="flex justify-between items-start">
+                  <h3 className="font-display font-semibold text-xl text-mono-100 group-hover:text-mono-50 transition-colors pr-8 leading-relaxed">
+                    {faq.question}
+                  </h3>
+                  <span className="text-3xl text-mono-400 group-hover:text-mono-300 transition-all duration-300 flex-shrink-0">
                     {openIndex === index ? '−' : '+'}
                   </span>
                 </div>
               </button>
               
               {openIndex === index && (
-                <div className="bg-white rounded-b-lg px-6 pb-6 shadow-md">
-                  <p className="text-gray-600 leading-relaxed pt-4 border-t border-gray-100">
+                <div className="glass rounded-b-xl px-8 pb-8 mt-2 animate-slide-up">
+                  <div className="w-full h-px bg-mono-800 mb-6"></div>
+                  <p className="text-mono-300 leading-relaxed text-lg">
                     {faq.answer}
                   </p>
                 </div>

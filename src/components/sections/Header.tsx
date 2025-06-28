@@ -1,47 +1,99 @@
-"use client"
-import { Container } from "@/components/ui/Container"
-import { Button } from "@/components/ui/Button"
-import Link from "next/link"
-import { useState } from "react"
+"use client";
+import { Container } from "@/components/ui/Container";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="bg-black text-white py-4 fixed w-full top-0 z-50">
+    <header
+      className={cn(
+        "fixed w-full top-0 z-50 transition-all duration-300",
+        isScrolled
+          ? "bg-mono-950/90 backdrop-blur-xl border-b border-mono-800/50"
+          : "bg-mono-950/70 backdrop-blur-sm"
+      )}
+    >
       <Container>
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white rounded-full"></div>
-            <span className="text-xl font-bold">Vibery</span>
+        <div className="flex items-center justify-between py-4">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3 group z-50">
+            <div className="w-8 h-8 bg-mono-50 rounded-full transition-transform group-hover:scale-110 duration-300"></div>
+            <span className="text-xl font-display font-bold text-mono-50 tracking-tight">
+              Vibery
+            </span>
           </Link>
-          
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/privacy" className="hover:text-gray-300 transition-colors">
-              プライバシーポリシー
+            <Link
+              href="/privacy"
+              className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium text-sm"
+            >
+              Privacy
             </Link>
-            <Link href="/terms" className="hover:text-gray-300 transition-colors">
-              利用規約
+            <Link
+              href="/terms"
+              className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium text-sm"
+            >
+              Terms
             </Link>
           </nav>
 
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden w-6 h-6 flex flex-col justify-center items-center"
+            className="md:hidden w-6 h-6 flex flex-col justify-center items-center space-y-1 group z-50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-            <span className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-            <span className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+            <span
+              className={cn(
+                "bg-mono-50 block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm",
+                isMenuOpen ? "rotate-45 translate-y-1" : ""
+              )}
+            ></span>
+            <span
+              className={cn(
+                "bg-mono-50 block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm",
+                isMenuOpen ? "opacity-0" : ""
+              )}
+            ></span>
+            <span
+              className={cn(
+                "bg-mono-50 block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm",
+                isMenuOpen ? "-rotate-45 -translate-y-1" : ""
+              )}
+            ></span>
           </button>
         </div>
 
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-800">
-            <div className="flex flex-col space-y-4 pt-4">
-              <Link href="/privacy" className="hover:text-gray-300 transition-colors">
+          <nav className="md:hidden border-t border-mono-800/50 py-4 bg-mono-950/95 backdrop-blur-xl">
+            <div className="flex flex-col space-y-4">
+              <Link
+                href="/privacy"
+                className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 プライバシーポリシー
               </Link>
-              <Link href="/terms" className="hover:text-gray-300 transition-colors">
+              <Link
+                href="/terms"
+                className="text-mono-400 hover:text-mono-100 transition-colors duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 利用規約
               </Link>
             </div>
@@ -49,5 +101,5 @@ export function Header() {
         )}
       </Container>
     </header>
-  )
+  );
 }
