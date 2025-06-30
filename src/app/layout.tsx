@@ -6,13 +6,16 @@ import { LINKS } from "@/config/links";
 
 export const metadata: Metadata = {
   metadataBase: new URL(LINKS.site.url),
+
   title: {
     default:
-      "Vibery - 同性の友達づくりアプリ | 感性で繋がる新しいコミュニケーション",
+      "Vibery - 友達作り・友達探しができる同性SNS | 趣味でつながる新しい出会い方",
     template: "%s | Vibery",
   },
+
   description:
-    "Viberyは同性限定の友達づくりアプリ。恋愛ではなく純粋な友情を育む、安心・安全なコミュニケーション環境を提供します。趣味タグマッチングで価値観の合う友達を見つけよう。",
+    "【友達作り・友達探し】Viberyは同性限定のSNS。趣味タグで価値観が合う友達の作り方がわかる、安心・匿名のコミュニティアプリです。",
+
   keywords: [
     "SNS",
     "友達作り",
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
       "感性で繋がる、新しい友達づくり。同性限定で安心して趣味や価値観を共有できるコミュニケーションアプリ。",
     images: [
       {
-        url: "/images/applogo.jpg", // アプリロゴを使用
+        url: "/images/applogo.jpg",
         width: 1200,
         height: 630,
         alt: "Vibery - 同性の友達づくりアプリ",
@@ -63,7 +66,7 @@ export const metadata: Metadata = {
     ],
   },
 
-  manifest: "/manifest.json", // PWA対応の場合
+  manifest: "/manifest.json",
   category: "Social Media",
   applicationName: LINKS.site.name,
   appleWebApp: {
@@ -71,21 +74,20 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: LINKS.site.name,
   },
+
+  // ファビコンとアイコンの設定を改善
   icons: {
     icon: [
-      { url: "/images/applogo.jpg", sizes: "32x32", type: "image/jpeg" },
-      { url: "/images/applogo.jpg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [
-      { url: "/images/applogo.jpg", sizes: "180x180", type: "image/jpeg" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    other: [
-      {
-        rel: "apple-touch-icon-precomposed",
-        url: "/images/applogo.jpg",
-      },
-    ],
+    shortcut: "/favicon.ico",
   },
+
   formatDetection: {
     telephone: false,
   },
@@ -122,6 +124,22 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
+        {/* 明示的なファビコン設定 */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="icon"
+          href="/icon-16x16.png"
+          sizes="16x16"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/icon-32x32.png"
+          sizes="32x32"
+          type="image/png"
+        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* App Store link for iOS */}
         <meta
