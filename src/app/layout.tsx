@@ -75,12 +75,12 @@ export const metadata: Metadata = {
     title: LINKS.site.name,
   },
 
-  // ファビコンとアイコンの設定を改善
+  // ファビコン設定を明確にする
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
@@ -90,10 +90,6 @@ export const metadata: Metadata = {
 
   formatDetection: {
     telephone: false,
-  },
-  verification: {
-    // Google Search Console verification (必要に応じて追加)
-    // google: "your-google-verification-code",
   },
 };
 
@@ -117,7 +113,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        {/* 追加のSEO要素 */}
+        {/* SEO要素 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -125,21 +121,25 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* 明示的なファビコン設定 */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* ファビコンを明示的に指定（ブラウザキャッシュ対策） */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1" />
         <link
           rel="icon"
-          href="/icon-16x16.png"
+          type="image/png"
           sizes="16x16"
-          type="image/png"
+          href="/favicon-16x16.png?v=1"
         />
         <link
           rel="icon"
-          href="/icon-32x32.png"
-          sizes="32x32"
           type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png?v=1"
         />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png?v=1"
+        />
 
         {/* App Store link for iOS */}
         <meta
