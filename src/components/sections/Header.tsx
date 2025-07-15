@@ -29,23 +29,23 @@ export function Header() {
       )}
     >
       <Container>
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between h-20">
+          {" "}
+          {/* 固定高さを設定 */}
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group z-50">
-            <div className="relative w-8 h-8 transition-transform group-hover:scale-110 duration-300">
+          <Link href="/" className="flex items-center group z-50">
+            <div className="relative w-24 h-24 transition-transform group-hover:scale-110 duration-300 overflow-hidden">
+              {" "}
+              {/* ロゴサイズを拡大し、overflowを隠す */}
               <Image
-                src="/images/applogo.jpg"
+                src="/images/appLogo.png"
                 alt={`${LINKS.site.name} ロゴ`}
                 fill
-                className="object-contain rounded-lg"
+                className="object-contain"
                 priority
               />
             </div>
-            <span className="text-xl font-display font-bold text-mono-50 tracking-tight">
-              {LINKS.site.name}
-            </span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
@@ -67,7 +67,6 @@ export function Header() {
               Terms
             </Link>
           </nav>
-
           {/* Mobile Menu Button */}
           <button
             className="md:hidden w-6 h-6 flex flex-col justify-center items-center space-y-1 group z-50"

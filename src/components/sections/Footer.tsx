@@ -9,18 +9,15 @@ export function Footer() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="relative w-10 h-10">
+            <div className="mb-6">
+              <div className="relative w-20 h-20 overflow-hidden">
                 <Image
-                  src="/images/applogo.jpg"
+                  src="/images/appLogo.png"
                   alt={`${LINKS.site.name} ロゴ`}
                   fill
-                  className="object-contain rounded-lg"
+                  className="object-contain"
                 />
               </div>
-              <span className="text-2xl font-display font-bold text-mono-50">
-                {LINKS.site.name}
-              </span>
             </div>
 
             <p className="text-mono-400 mb-6 text-lg leading-relaxed max-w-md">
