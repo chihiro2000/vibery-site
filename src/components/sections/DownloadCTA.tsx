@@ -9,8 +9,8 @@ export function DownloadCTA() {
   };
 
   return (
-    <section className="py-16 relative">
-      <div className="section-divider mb-16"></div>
+    <section className="py-8 md:py-16 relative">
+      <div className="section-divider mb-8 md:mb-16"></div>
 
       <Container>
         <div className="text-center max-w-4xl mx-auto">
