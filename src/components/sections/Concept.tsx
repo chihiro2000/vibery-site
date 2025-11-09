@@ -110,9 +110,6 @@ export function Concept() {
                   }}
                 >
                   {cardImages.map((image, index) => {
-                    // 6枚のカードを円形に配置（360度 / 6 = 60度ずつ）
-                    const angle = (index * 360) / 6;
-
                     return (
                       <div
                         key={index}

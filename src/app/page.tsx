@@ -1,6 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { Concept } from "@/components/sections/Concept";
-import { Features } from "@/components/sections/Features";
+
 import { DownloadCTA } from "@/components/sections/DownloadCTA";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Hero />
       <Concept />
-      {/* <Features /> */}
+
       <DownloadCTA />
     </>
   );
