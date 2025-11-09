@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Header } from "@/components/sections/Header";
-import { Footer } from "@/components/sections/Footer";
+import { Header } from "@/components/ui/Header";
+import { Footer } from "@/components/ui/Footer";
 import { LINKS } from "@/config/links";
 
 export const metadata: Metadata = {
