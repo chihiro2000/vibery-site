@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 
 // 6枚のカード画像
 const cardImages = [
-  "/images/concept/concept1.jpg",
-  "/images/concept/concept2.jpg",
-  "/images/concept/concept3.jpg",
-  "/images/concept/concept4.jpg",
-  "/images/concept/concept5.jpg",
-  "/images/concept/concept6.jpg",
+  "/images/concept/concept1.webp",
+  "/images/concept/concept2.webp",
+  "/images/concept/concept3.webp",
+  "/images/concept/concept4.webp",
+  "/images/concept/concept5.webp",
+  "/images/concept/concept6.webp",
 ];
 
 export function Concept() {
@@ -143,6 +143,7 @@ export function Concept() {
                               alt={`Vibery カード ${index + 1}`}
                               fill
                               className="object-cover"
+                              quality={90}
                               sizes="(max-width: 1024px) 180px, 240px"
                               priority={index < 3}
                             />
@@ -161,19 +162,13 @@ export function Concept() {
                               boxShadow:
                                 "0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2)",
                             }}
-                          >
-                            {/* ノッチ風装飾（裏面） */}
-                            <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-16 h-5 bg-mono-900 rounded-full"></div>
-                          </div>
+                          ></div>
                         </div>
                       </div>
                     );
                   })}
                 </div>
               </div>
-
-              {/* 中央の装飾的なドット */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-mono-400 rounded-full opacity-50"></div>
             </div>
           </div>
         </div>
