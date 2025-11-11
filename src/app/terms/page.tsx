@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="py-32 min-h-screen">
+    <main className="py-32 min-h-screen bg-white">
       <Container size="md">
-        <div className="glass rounded-2xl p-12 lg:p-16">
+        <div className="bg-mono-100/30 backdrop-blur-sm rounded-2xl p-12 lg:p-16 border border-mono-200">
           <header className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-mono-50">
+            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-mono-950">
               利用規約
             </h1>
-            <div className="w-16 h-px bg-mono-600 mx-auto mb-8"></div>
+            <div className="w-16 h-px bg-mono-400 mx-auto mb-8"></div>
             <p className="text-mono-500 font-mono uppercase tracking-wider text-sm">
               最終更新日: 2025年6月25日
             </p>
@@ -25,7 +25,7 @@ export default function TermsPage() {
 
           <div className="prose prose-lg max-w-none">
             <div className="mb-12">
-              <p className="text-mono-300 leading-relaxed text-lg">
+              <p className="text-mono-700 leading-relaxed text-lg">
                 本利用規約（以下「本規約」）は、{LINKS.site.name}
                 運営事務局（以下「運営者」）が提供するアプリ「{LINKS.site.name}
                 」（以下「本サービス」）の利用条件を定めるものです。本サービスを利用するすべての利用者（以下「ユーザー」）は、本規約に同意する必要があります。
@@ -33,11 +33,11 @@ export default function TermsPage() {
             </div>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第1条（本規約への同意）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   ユーザーは、本規約の定めに従って本サービスを利用するものとします。
                 </li>
@@ -51,14 +51,14 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第2条（サービス内容）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   本サービスは、同性の友達作りを目的としたコミュニケーション・マッチングアプリです。
-                  <strong className="text-mono-100 bg-mono-800 px-2 py-1 rounded">
+                  <strong className="text-mono-900 bg-mono-200 px-2 py-1 rounded">
                     恋愛・性的目的による利用は禁止します。
                   </strong>
                 </li>
@@ -70,7 +70,7 @@ export default function TermsPage() {
                 </li>
                 <li>
                   本サービスは
-                  <strong className="text-mono-100 bg-mono-800 px-2 py-1 rounded">
+                  <strong className="text-mono-900 bg-mono-200 px-2 py-1 rounded">
                     18歳以上（高校生を除く）
                   </strong>
                   の方のみ利用可能です。18歳未満の利用が判明した場合、運営者は直ちにアカウントを削除します。
@@ -79,11 +79,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第3条（アカウント登録と管理）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   ユーザーは、電話番号、Appleアカウント、または運営者が定めるその他の方法でアカウントを作成します。
                 </li>
@@ -103,20 +103,20 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第4条（禁止事項）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <p className="mb-6 text-mono-300 text-lg">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <p className="mb-6 text-mono-700 text-lg">
                 以下の行為を禁止します。違反が確認された場合、運営者は予告なくアカウント停止、利用制限、または利用契約の解除等の措置を講じることがあります。
               </p>
-              <ul className="list-disc list-inside space-y-3 text-mono-300 text-lg leading-relaxed">
+              <ul className="list-disc list-inside space-y-3 text-mono-700 text-lg leading-relaxed">
                 <li>他のユーザーまたは第三者への誹謗中傷・差別・脅迫</li>
                 <li>
                   わいせつ・公序良俗に反する表現、宗教・政治・性的目的の勧誘
                 </li>
                 <li>
-                  <strong className="text-mono-100 bg-mono-800 px-2 py-1 rounded">
+                  <strong className="text-mono-900 bg-mono-200 px-2 py-1 rounded">
                     恋愛・性的な出会いを目的とする行為
                   </strong>
                 </li>
@@ -133,14 +133,14 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第5条（プライバシー・個人情報）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   運営者は、取得したユーザーの個人情報を、別途定める
-                  <strong className="text-mono-100">
+                  <strong className="text-mono-900">
                     「プライバシーポリシー」
                   </strong>
                   に従い適切に取り扱います。
@@ -152,11 +152,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第6条（位置情報の利用）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   本サービスは、アプリ起動時に限り、マッチング機能のため端末の位置情報を取得することがあります。
                 </li>
@@ -173,11 +173,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第7条（メッセージ機能）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>ユーザー間でメッセージや画像の送受信が可能です。</li>
                 <li>
                   不適切な内容が確認された場合、該当メッセージの削除やアカウント停止等の措置を行うことがあります。
@@ -189,11 +189,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第8条（サードパーティサービスの利用）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   本サービスは、Firebaseなどの外部クラウドサービスでデータ保存や認証を行います。
                 </li>
@@ -204,11 +204,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第9条（利用停止・退会）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   本規約違反時、運営者は予告なく利用停止等の措置を講じることがあります。
                 </li>
@@ -225,11 +225,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第10条（安全対策と通報）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   本サービスでは、不適切な行為やユーザーを発見した場合の通報システムを提供しています。
                 </li>
@@ -243,11 +243,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第11条（アカウント停止・削除に関する異議申し立て）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   アカウント停止または削除に関して異議のあるユーザーは、通知を受けた日から14日以内に、vibery.official@gmail.com宛に異議申し立てを行うことができます。
                 </li>
@@ -270,11 +270,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第12条（ユーザーフィードバックの扱い）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   本サービスではアプリ内でフィードバックや改善提案を送信する機能を提供しています。
                 </li>
@@ -288,11 +288,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第13条（サービスの変更・中断）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   運営者は事前告知のうえ、サービス内容の変更・追加または提供中断を行うことがあります。
                 </li>
@@ -306,11 +306,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第14条（免責事項）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>
                   運営者は、本サービスの特定目的への適合性、有用性、正確性等を保証しません。
                 </li>
@@ -324,11 +324,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第15条（規約の変更）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>運営者は必要に応じて本規約を変更できます。</li>
                 <li>
                   規約変更時は、サービス上で告知し、効力発生日を定めます。
@@ -340,11 +340,11 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第16条（準拠法・管轄裁判所）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <ol className="list-decimal list-inside space-y-4 text-mono-300 text-lg leading-relaxed">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
                 <li>本規約には日本法が適用されます。</li>
                 <li>
                   紛争が生じた場合、運営者所在地の地方裁判所または簡易裁判所を専属的合意管轄裁判所とします。
@@ -353,40 +353,40 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 第17条（お問い合わせ）
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <div className="glass p-8 rounded-xl">
-                <p className="mb-6 text-mono-300 text-lg">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <div className="bg-white/80 backdrop-blur-sm border border-mono-200 p-8 rounded-xl">
+                <p className="mb-6 text-mono-700 text-lg">
                   本規約に関するお問い合わせは、以下のメールアドレスまでご連絡ください。
                 </p>
                 <p className="text-lg mb-4">
-                  <strong className="text-mono-100 font-mono uppercase tracking-wider text-sm">
+                  <strong className="text-mono-900 font-mono uppercase tracking-wider text-sm">
                     Email:{" "}
                   </strong>
                   <a
                     href="mailto:vibery.official@gmail.com"
-                    className="text-mono-300 hover:text-mono-100 transition-colors underline underline-offset-4"
+                    className="text-mono-700 hover:text-mono-950 transition-colors underline underline-offset-4"
                   >
                     vibery.official@gmail.com
                   </a>
                 </p>
-                <p className="text-mono-300 text-lg">
+                <p className="text-mono-700 text-lg">
                   運営者は、お問い合わせに対し合理的な範囲で速やかに対応いたします。
                 </p>
               </div>
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-display font-bold mb-8 text-mono-50">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
                 付則
               </h2>
-              <div className="w-12 h-px bg-mono-700 mb-8"></div>
-              <p className="text-mono-300 text-lg leading-relaxed mb-4">
+              <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <p className="text-mono-700 text-lg leading-relaxed mb-4">
                 本規約は2025年3月8日に制定・施行されました。
               </p>
-              <p className="text-mono-300 text-lg leading-relaxed">
+              <p className="text-mono-700 text-lg leading-relaxed">
                 ユーザーは本規約の内容を理解し、本利用契約の成立後は本規約に従うものとします。
               </p>
             </section>

@@ -9,24 +9,24 @@ export function DownloadCTA() {
   };
 
   return (
-    <section className="py-8 md:py-16 relative">
-      <div className="section-divider mb-8 md:mb-16"></div>
+    <section className="py-3 md:py-8 relative bg-white">
+      <div className="section-divider mb-4 md:mb-8"></div>
 
       <Container>
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-display font-bold mb-8 text-mono-50">
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-5 text-mono-950 uppercase">
             Feel the Vibe,
             <br className="hidden md:block" />
             Find Your People
           </h2>
 
-          <p className="text-xl text-mono-400 mb-12 leading-relaxed font-light">
-            感性で響き合う、同性限定の新しいSNS。
+          <p className="text-xl text-mono-600 mb-8 leading-relaxed font-light">
+            同性限定の新しいSNS。
             <br className="hidden md:block" />
             Vibeから始まる、新しい友達を探そう！
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button
               size="xl"
               variant="primary"
@@ -38,6 +38,10 @@ export function DownloadCTA() {
           </div>
         </div>
       </Container>
+
+      {/* 背景の装飾 */}
+      <div className="absolute top-1/4 left-0 w-72 h-72 bg-mono-200/30 rounded-full blur-3xl -z-10 opacity-40"></div>
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-mono-200/30 rounded-full blur-3xl -z-10 opacity-30"></div>
     </section>
   );
 }
