@@ -10,20 +10,18 @@ export function DownloadCTA() {
 
   return (
     <section className="py-3 md:py-8 relative bg-white">
-      <div className="section-divider mb-4 md:mb-8"></div>
-
       <Container>
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-display font-bold mb-5 text-mono-950 uppercase">
-            Feel the Vibe,
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-5 text-mono-950 capitalize">
+            Feel the vibe,
             <br className="hidden md:block" />
-            Find Your People
+            Find your people
           </h2>
 
           <p className="text-xl text-mono-600 mb-8 leading-relaxed font-light">
             同性限定の新しいSNS。
             <br className="hidden md:block" />
-            Vibeから始まる、新しい友達を探そう！
+            Vibeから始まる、新しい友達を探そう!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

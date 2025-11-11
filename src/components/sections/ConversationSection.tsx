@@ -1,7 +1,9 @@
 "use client";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { LINKS } from "@/config/links";
 
 export function ConversationSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,10 +12,12 @@ export function ConversationSection() {
     setIsVisible(true);
   }, []);
 
+  const handleDownload = () => {
+    window.open(LINKS.appStore, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="py-3 md:py-8 relative bg-white">
-      <div className="section-divider mb-4 md:mb-8"></div>
-
       <Container className="overflow-visible">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* 左側: 会話画像（PC時） */}
@@ -62,7 +66,7 @@ export function ConversationSection() {
               <h2
                 className={`
                   text-4xl md:text-5xl lg:text-6xl font-display font-bold 
-                  text-mono-950 leading-tight uppercase
+                  text-mono-950 leading-tight capitalize
                   transition-all duration-1000 ease-out
                   ${
                     isVisible
@@ -71,13 +75,13 @@ export function ConversationSection() {
                   }
                 `}
               >
-                from here
+                From here
               </h2>
               {/* タイトル - 2行目: 遅れて力強く */}
               <h2
                 className={`
                   text-4xl md:text-5xl lg:text-6xl font-display font-bold 
-                  text-mono-950 leading-tight mb-5 uppercase
+                  text-mono-950 leading-tight mb-5 capitalize
                   transition-all duration-1000 ease-out delay-300
                   ${
                     isVisible
@@ -86,7 +90,7 @@ export function ConversationSection() {
                   }
                 `}
               >
-                a new friendship begins
+                A new friendship begins
               </h2>
               <div className="w-16 h-1 bg-mono-800 mb-5 md:mb-6"></div>
             </div>
@@ -110,6 +114,27 @@ export function ConversationSection() {
                 <br className="hidden md:block" />
                 深い友情へと発展していきます。
               </p>
+            </div>
+
+            {/* CTAボタン */}
+            <div
+              className={`
+                transition-all duration-1000 ease-out delay-700
+                ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }
+              `}
+            >
+              <Button
+                variant="primary"
+                size="lg"
+                className="font-semibold"
+                onClick={handleDownload}
+              >
+                今すぐ友達を見つける！
+              </Button>
             </div>
           </div>
         </div>

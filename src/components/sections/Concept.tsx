@@ -21,9 +21,7 @@ export function Concept() {
   }, []);
 
   return (
-    <section className="py-3 md:py-8 relative bg-white">
-      <div className="section-divider mb-4 md:mb-8"></div>
-
+    <section className="py-2 md:py-4 relative bg-white">
       <Container className="overflow-visible">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* 左側: テキストコンテンツ */}
@@ -33,7 +31,7 @@ export function Concept() {
               <h2
                 className={`
                   text-4xl md:text-5xl lg:text-6xl font-display font-bold 
-                  text-mono-950 leading-tight uppercase
+                  text-mono-950 leading-tight
                   transition-all duration-1000 ease-out
                   ${
                     isVisible
@@ -42,13 +40,13 @@ export function Concept() {
                   }
                 `}
               >
-                discover friends
+                Discover Friends
               </h2>
               {/* タイトル - 2行目: 遅れて力強く */}
               <h2
                 className={`
                   text-4xl md:text-5xl lg:text-6xl font-display font-bold 
-                  text-mono-950 leading-tight mb-5 uppercase
+                  text-mono-950 leading-tight mb-5
                   transition-all duration-1000 ease-out delay-300
                   ${
                     isVisible
@@ -57,7 +55,7 @@ export function Concept() {
                   }
                 `}
               >
-                celebrate girlhood
+                Celebrate Girlhood
               </h2>
               <div className="w-16 h-1 bg-mono-800 mb-5 md:mb-6"></div>
             </div>
@@ -83,7 +81,7 @@ export function Concept() {
           </div>
 
           {/* 右側: 3D回転カードアニメーション */}
-          <div className="relative flex justify-center lg:justify-end py-6 md:py-12 lg:py-16">
+          <div className="relative flex justify-center lg:justify-end py-4 md:py-6 lg:py-8">
             {/* 十分な高さを確保した3Dコンテナ - モバイルは小さく、PCは大きく */}
             <div
               className="relative w-full max-w-[450px] lg:max-w-[700px]"
