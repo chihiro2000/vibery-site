@@ -21,19 +21,19 @@ export function Concept() {
   }, []);
 
   return (
-    <section className="py-4 md:py-10 relative bg-white">
-      <div className="section-divider mb-6 md:mb-12"></div>
+    <section className="py-3 md:py-8 relative bg-white">
+      <div className="section-divider mb-4 md:mb-8"></div>
 
       <Container className="overflow-visible">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* 左側: テキストコンテンツ */}
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-5 md:space-y-6">
             <div>
               {/* タイトル - 1行目: フェードイン */}
               <h2
                 className={`
                   text-4xl md:text-5xl lg:text-6xl font-display font-bold 
-                  text-mono-950 leading-tight
+                  text-mono-950 leading-tight uppercase
                   transition-all duration-1000 ease-out
                   ${
                     isVisible
@@ -48,7 +48,7 @@ export function Concept() {
               <h2
                 className={`
                   text-4xl md:text-5xl lg:text-6xl font-display font-bold 
-                  text-mono-950 leading-tight mb-6
+                  text-mono-950 leading-tight mb-5 uppercase
                   transition-all duration-1000 ease-out delay-300
                   ${
                     isVisible
@@ -59,13 +59,13 @@ export function Concept() {
               >
                 celebrate girlhood
               </h2>
-              <div className="w-16 h-1 bg-mono-800 mb-6 md:mb-8"></div>
+              <div className="w-16 h-1 bg-mono-800 mb-5 md:mb-6"></div>
             </div>
 
             {/* サブタイトル */}
             <div
               className={`
-                space-y-4 md:space-y-6 text-lg md:text-xl text-mono-700 leading-relaxed
+                text-xl md:text-2xl text-mono-600 leading-loose tracking-wide
                 transition-all duration-1000 ease-out delay-500
                 ${
                   isVisible
@@ -74,7 +74,7 @@ export function Concept() {
                 }
               `}
             >
-              <p className="font-medium">
+              <p className="font-light">
                 好きやセンスでつながる、新しい関係。
                 <br className="hidden md:block" />
                 ここから始まる、私たちのリアル。
