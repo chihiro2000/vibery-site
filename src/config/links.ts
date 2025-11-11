@@ -7,10 +7,10 @@ export const LINKS = {
   // ソーシャルメディア
   social: {
     threads:
-      "https://www.threads.com/@vibery__official?igshid=NTc4MTIwNjQ2YQ==",
+      "https://www.threads.com/@beingbetweenvibe?igshid=NTc4MTIwNjQ2YQ==",
     instagram:
-      "https://www.instagram.com/vibery__official?igsh=bWI5bzFoODg4eHNu&utm_source=qr",
-    tiktok: "https://www.tiktok.com/@vibery.official0?_t=ZS-8xa0OsotYO8&_r=1",
+      "https://www.instagram.com/beingbetweenvibe?igsh=bWI5bzFoODg4eHNu&utm_source=qr",
+    tiktok: "https://www.tiktok.com/@beingbetween_vibe?_r=1&_t=ZS-91JTM7koIDg",
   },
 
   // 内部ページ

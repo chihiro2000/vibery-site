@@ -123,8 +123,8 @@ function NavLink({
       href={href}
       className={cn(
         "relative px-6 py-3 rounded-[16px] text-lg font-semibold tracking-tight",
-        "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300",
-        "hover:bg-white/[0.2] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.5)]",
+        "text-black transition-all duration-300", // ← 黒文字
+        "hover:bg-black/[0.05] hover:text-black", // ← hover時もうっすらグレー背景
         "active:scale-[0.97]"
       )}
     >
@@ -133,7 +133,6 @@ function NavLink({
   );
 }
 
-// Mobile Navigation Link
 function MobileNavLink({
   href,
   onClick,
@@ -148,10 +147,12 @@ function MobileNavLink({
       href={href}
       onClick={onClick}
       className={cn(
-        "px-6 py-4 text-mono-700 font-medium transition-all duration-200",
-        "hover:bg-white/[0.2] hover:text-mono-950",
-        "active:bg-white/[0.3]",
-        "border-b border-white/[0.1] last:border-b-0"
+        "px-6 py-4 rounded-[12px]",
+        "text-black text-lg font-semibold tracking-tight", // ← 黒文字
+        "transition-all duration-200",
+        "hover:bg-black/[0.05] hover:text-black", // ← hover時にうっすら背景
+        "active:scale-[0.97] active:bg-black/[0.1]",
+        "border-b border-black/[0.05] last:border-b-0"
       )}
     >
       {children}

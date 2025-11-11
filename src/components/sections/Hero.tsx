@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/Button";
+import { ScrollIndicator } from "@/components/ui/ScrollIndicator";
 import { LINKS } from "@/config/links";
 
 // 24枚の画像パス
@@ -32,12 +33,11 @@ export function Hero() {
     let scrollPosition2 = 0;
     let scrollPosition3 = 0;
 
-    const scrollSpeed = 0.5; // 統一されたベーススピード
-    const imageHeight = 300; // 1:1の画像サイズ
+    const scrollSpeed = 0.5;
+    const imageHeight = 300;
     const gap = 16;
     const itemHeight = imageHeight + gap;
 
-    // 各列の画像数（24枚を3列に均等分配: 8枚ずつ）
     const col1Images = 8;
     const col2Images = 8;
     const col3Images = 8;
@@ -46,9 +46,8 @@ export function Hero() {
     const totalHeight2 = itemHeight * col2Images;
     const totalHeight3 = itemHeight * col3Images;
 
-    // 列1と列3の初期位置を下部から開始（上向きスクロール用）
     const initialOffset1 = totalHeight1;
-    const initialOffset3 = totalHeight3 * 0.6; // 列3は少しオフセット
+    const initialOffset3 = totalHeight3 * 0.6;
 
     col1.style.transform = `translateY(-${initialOffset1}px)`;
     col3.style.transform = `translateY(-${initialOffset3}px)`;
@@ -57,21 +56,18 @@ export function Hero() {
     scrollPosition3 = initialOffset3;
 
     const animate = () => {
-      // 列1: 上向きスクロール
       scrollPosition1 -= scrollSpeed;
       if (scrollPosition1 <= 0) {
         scrollPosition1 = totalHeight1;
       }
       col1.style.transform = `translateY(-${scrollPosition1}px)`;
 
-      // 列2: 下向きスクロール
       scrollPosition2 += scrollSpeed;
       if (scrollPosition2 >= totalHeight2) {
         scrollPosition2 = 0;
       }
       col2.style.transform = `translateY(-${scrollPosition2}px)`;
 
-      // 列3: 上向きスクロール（列1より少し遅め）
       scrollPosition3 -= scrollSpeed * 0.85;
       if (scrollPosition3 <= 0) {
         scrollPosition3 = totalHeight3;
@@ -88,21 +84,14 @@ export function Hero() {
     };
   }, []);
 
-  const handleScroll = () => {
-    const nextSection = document.querySelector("main section:nth-child(2)");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const handleDownload = () => {
     window.open(LINKS.appStore, "_blank", "noopener,noreferrer");
   };
 
   // 画像を3列に均等分配（各列8枚ずつ）
-  const col1Images = images.slice(0, 8); // 1-8
-  const col2Images = images.slice(8, 16); // 9-16
-  const col3Images = images.slice(16, 24); // 17-24
+  const col1Images = images.slice(0, 8);
+  const col2Images = images.slice(8, 16);
+  const col3Images = images.slice(16, 24);
 
   // 各列を3回繰り返してシームレスループ
   const repeatedCol1 = [...col1Images, ...col1Images, ...col1Images];
@@ -258,17 +247,24 @@ export function Hero() {
                   bg-white/[0.08] hover:bg-white/[0.15]
                   backdrop-blur-xl
                   border border-white/20 hover:border-white/30
-                  text-mono-950 hover:text-mono-950
-                  font-medium tracking-[0.08em]
+                  text-white font-bold tracking-[0.08em]
+                  hover:text-white
                   shadow-[0_4px_24px_rgba(0,0,0,0.2)]
-                  hover:shadow-[0_4px_32px_rgba(0,0,0,0.3)]
+                  hover:shadow-[0_8px_40px_rgba(0,0,0,0.35)]
+                  hover:scale-[1.03]
                   transition-all duration-500
                   rounded-full
                   text-sm md:text-base
+                  relative overflow-hidden
+                  group
                 "
                 onClick={handleDownload}
               >
-                今すぐダウンロード
+                <span className="relative z-10">今すぐダウンロード</span>
+                {/* 上品なホバー時のグロー */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                </div>
               </Button>
             </div>
           </div>
@@ -276,39 +272,14 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <button
-        onClick={handleScroll}
+      <div
         className={`
-          absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2
-          flex flex-col items-center gap-1.5 text-white/50 hover:text-white/70
-          transition-all duration-[2000ms] ease-out cursor-pointer z-20
+          transition-all duration-[2000ms] ease-out
           ${isVisible ? "opacity-100" : "opacity-0"}
         `}
-        style={{
-          textShadow: "0 2px 6px rgba(0, 0, 0, 0.3)",
-        }}
-        aria-label="スクロール"
       >
-        <span className="text-[9px] md:text-[10px] tracking-[0.3em] font-mono uppercase animate-pulse">
-          Scroll
-        </span>
-        <svg
-          className="w-3.5 h-3.5 md:w-4 md:h-4 animate-bounce"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          style={{
-            filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))",
-          }}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
-      </button>
+        <ScrollIndicator />
+      </div>
 
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-white/80 to-transparent pointer-events-none z-10"></div>
