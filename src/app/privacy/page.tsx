@@ -341,10 +341,10 @@ export default function PrivacyPage() {
                     Email:{" "}
                   </strong>
                   <a
-                    href="mailto:vibery.official@gmail.com"
+                    href="mailto:vibery.official.app@gmail.com"
                     className="text-mono-700 hover:text-mono-950 transition-colors underline underline-offset-4"
                   >
-                    vibery.official@gmail.com
+                    vibery.official.app@gmail.com
                   </a>
                 </p>
               </div>
