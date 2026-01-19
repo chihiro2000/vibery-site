@@ -45,6 +45,10 @@ export default function TermsPage() {
                   ユーザーが本サービスをスマートフォンその他の情報端末にダウンロードし、本規約への同意手続きを行った時点で、ユーザーと運営者との間で本規約に基づく利用契約（以下「本利用契約」）が成立します。
                 </li>
                 <li>
+                  本規約に加え、Appleが定める「標準Appleメディアサービス利用規約（Standard
+                  EULA）」がユーザーと運営者の間に適用されるものとします。
+                </li>
+                <li>
                   運営者は本サービスに関し、本規約のほか、ルールやガイドライン等を定める場合があります。これらも本規約の一部を構成します。
                 </li>
               </ol>
@@ -63,7 +67,7 @@ export default function TermsPage() {
                   </strong>
                 </li>
                 <li>
-                  本サービスは無料で提供され、広告収益により運営されます。
+                  本サービスには、無料で利用可能な機能と、有料で提供される機能（以下「有料プラン」）があります。
                 </li>
                 <li>
                   本サービスでは、ユーザー間のメッセージ機能や位置情報を用いた近隣ユーザー検索等の機能を提供します。
@@ -380,11 +384,43 @@ export default function TermsPage() {
 
             <section className="mb-16">
               <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
-                付則
+                第18条（有料プランおよび定期購読）
               </h2>
               <div className="w-12 h-px bg-mono-300 mb-8"></div>
+              <ol className="list-decimal list-inside space-y-4 text-mono-700 text-lg leading-relaxed">
+                <li>
+                  ユーザーは、本サービス内の有料プラン（Vibery
+                  Plus等）を購入することで、追加機能（スワイプ制限の解除、高度なフィルタリング等）を利用できます。料金および購読期間はアプリ内の購入画面に表示されます。
+                </li>
+                <li>
+                  有料プランの決済は、Apple（iTunesアカウント）を経由して行われます。
+                </li>
+                <li>
+                  <strong>自動更新：</strong>{" "}
+                  定期購読は自動更新制です。現在の購読期間が終了する24時間前までに解約（自動更新の停止）を行わない限り、同一の期間・料金で自動的に更新され、iTunesアカウントに請求されます。
+                </li>
+                <li>
+                  <strong>管理と解約：</strong>{" "}
+                  定期購読の管理および解約は、ユーザー自身がiOSの「設定」＞「Apple
+                  ID」＞「サブスクリプション」から行うものとします。アプリを削除（アンインストール）しただけでは自動更新は解除されません。
+                </li>
+                <li>
+                  <strong>返金：</strong>{" "}
+                  購入後のキャンセルおよび返金については、Appleの規定に従うものとし、運営者は直接の返金対応を行いません。
+                </li>
+                <li>
+                  <strong>機種変更時の復元：</strong>{" "}
+                  機種変更時などは、アプリ内の購入画面にある「購入を復元」ボタンから、無料で以前の購入状態を復元できます。
+                </li>
+              </ol>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-display font-bold mb-8 text-mono-950">
+                付則
+              </h2>
               <p className="text-mono-700 text-lg leading-relaxed mb-4">
-                本規約は2025年3月8日に制定・施行されました。
+                最終改訂日：2026年1月19日
               </p>
               <p className="text-mono-700 text-lg leading-relaxed">
                 ユーザーは本規約の内容を理解し、本利用契約の成立後は本規約に従うものとします。
